@@ -17,11 +17,13 @@ Using bulleted lists, describe the accuracy scores and the precision and recall 
 * Machine Learning Model 1:
     * Description of Model 1 Accuracy, Precision, and Recall scores.
 
+- **Accuracy Score**: The accuracy helps us identify the the *overall* performance of our model and how often it was correct. With an accuracy of 99%, way above the 85% threshold, we can confirm that our model correctly predicted/classified values 99% of the time.
+- **Recall Score**: The recall helps us identify how well our model found and identified each outcome. We can see that 99% of healthy loans were correctly identified from all the healthy loans in the dataset. This shows that our model already performed very well in predicting the correct values for each loan.
+- **Precision Score**: As for the precision, it helps us identify how well our model found and identified each positive outcome correctly. With a value of 100% for healthy loans and a value of 84% for unhealthy loans, we can definitely see that our loan is way too good at finding good loans (almost being overfit) while it's not good at finding unhealthy ones.
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
 
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+Based on the above results, we can conclude that a Logistic Regression model is definitely good for any classification problem that involves binary outcomes such as credit risk issues.
+It performs very fast and with an amazing accuracy. However, I'd suggest making sure the training dataset is balanced in terms of defaulting loans and non defaulting loans to ensure our model is not overfit and is mainly good at predicting non defaulting loans. 
+Right now, it would be best to try to balance our dataset and train the model again before recommending it right away.
