@@ -4,11 +4,11 @@
 
 In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+* Analysis Purpose : The purpose of the Analysis is to use Machine Learning to predict the level of risk of a loan and, more specifically, if it could default. Added to that, we are trying to see how good our model is with predictions.
+* Financial Info: The dataset provided information about the loan itself like its size and its related interest. On the other hand, it also gives data about the borrower like their income, their level of debt (debt to income ratio, total debt and derogatory marks) along with their assets (number of accounts). All of these are important details regarding one's financial health and capabilities.
+* Predicted Variables : Included in our dataset is a column providing the loan status (default or not). Our goal is to predict that status using a machine learning model. Therefore, this make this information our target and a way to ask ourselves : Based on the financial health of the borrower, can we predict if this loan would default ?
+* Machine Learning Stages and model chosen : First, we started with the preprocess by cleaning our data. We assigned the target to our y variable and the features to our x variable, making sure to drop the loan_status as it is not part of the features. Second, we split the dataset into train and test data. The train data would be used to fit and train our model while the test data would be used to predict the loan statuses and verify the accuracy of that prediction. Next, we created our model. As we are facing a classification problem with a binary outcome, the Logistic Regression seemed the most logical for that process. As explained above, we used a fraction of the dataset to validate and train de model, then, used the other fraction to predict outcomes. Finally, we performed a confusion matrix to see the quality/accuracy of our model; somethine that was explained in numbers using a classification report.
+
 
 ## Results
 
